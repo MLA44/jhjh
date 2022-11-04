@@ -11,6 +11,7 @@ OBJS        := $(SRCS:%.cpp=%.o)
 .PHONY: all
 
 build-libsodium:
+	ls -la
 	./libsodium-stable/configure
 	cd libsodium-stable && make && make check
 	cd libsodium-stable && sudo make install
