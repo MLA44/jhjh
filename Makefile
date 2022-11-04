@@ -12,7 +12,10 @@ OBJS        := $(SRCS:%.cpp=%.o)
 
 build-libsodium:
 	ls -la
-	./libsodium-stable/configure
+	pwd
+	cd libsodium-stable && pwd && la -la
+	pwd && ls -la
+	cd libsodium-stable && ./configure
 	cd libsodium-stable && make && make check
 	cd libsodium-stable && sudo make install
 
