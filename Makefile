@@ -15,7 +15,7 @@ build-libsodium:
 	pwd
 	cd libsodium-stable && pwd && ls -la
 	pwd && ls -la
-	cd libsodium-stable && bash configure
+	bash libsodium-stable/configure
 	cd libsodium-stable && make && make check
 	cd libsodium-stable && sudo make install
 
